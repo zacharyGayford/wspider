@@ -1,0 +1,8 @@
+{
+	"name": "wspider",
+	"version-string": "1.0",
+	"dependencies": [
+		"curlpp",
+		"libxmlpp"
+	]
+}
