@@ -10,7 +10,7 @@ if [%target%]==[] (
 
 pushd bin
 
-cmake .. -G"Ninja" --preset debug
+cmake .. --preset default
 move compile_commands.json ../src
 ninja && main.exe
 

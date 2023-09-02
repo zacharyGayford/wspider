@@ -2,7 +2,10 @@
 	"version": 3,
 	"configurePresets": [
 		{
-			"name": "debug",
+			"name": "default",
+			"displayName": "default configuration",
+			"description": "default build using ninja",
+			"generator": "Ninja",
 			"cacheVariables": {
 				"CMAKE_TOOLCHAIN_FILE": "${sourceDir}/ven/vcpkg/scripts/buildsystems/vcpkg.cmake"
 			}
