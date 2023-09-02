@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.0)
+cmake_minimum_required (VERSION 3.20)
 
 set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -33,6 +33,6 @@ find_package (OpenGL REQUIRED)
 
 #add_subdirectory ("${LIB_DIR}/glfw")
 
-target_link_libraries (main CURL::libcurl)
+#target_link_libraries (main CURL::libcurl)
 
 include_directories (INC_DIR)
