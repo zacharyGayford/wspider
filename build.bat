@@ -8,10 +8,7 @@ if [%target%]==[] (
     set target=main
 )
 
-pushd bin
+cmake -B bin -S . --preset default
+move bin/compile_commands.json src
 
-cmake .. --preset default
-move compile_commands.json ../src
-ninja && main.exe
-
-popd 
+ninja -C bin && .\bin\main.exe
