@@ -9,30 +9,24 @@ project (main)
 
 set (PROJECT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set (SRC_DIR "${PROJECT_DIR}/src")
-set (LIB_DIR "${PROJECT_DIR}/lib")
 set (BIN_DIR "${PROJECT_DIR}/bin")
 set (RES_DIR "${PROJECT_DIR}/res")
 set (INC_DIR "${PROJECT_DIR}/inc")
-set (VEN_DIR "${PROJECT_DIR}/ven")
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
 file (GLOB SOURCES "${SRC_DIR}/*.cpp")
-file (GLOB VENDOR "${VEN_DIR}/*.cpp")
 
 add_executable (
 	main
 	${SOURCES}
-	${VENDOR}
 )
 
 find_package (OpenGL REQUIRED)
-#find_package (CURL REQUIRED)
+find_package (unofficial-curlpp CONFIG REQUIRED)
 
-#add_subdirectory ("${LIB_DIR}/glfw")
-
-#target_link_libraries (main CURL::libcurl)
+target_link_libraries (main PRIVATE unofficial::curlpp::curlpp)
 
 include_directories (INC_DIR)
