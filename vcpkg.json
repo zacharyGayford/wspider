@@ -4,6 +4,7 @@
 	"dependencies": [
 		"curlpp",
 		"libxmlpp",
-		"catch2"
+		"catch2",
+		"imgui"
 	]
 }
