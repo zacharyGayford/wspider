@@ -8,7 +8,9 @@
 			"generator": "Ninja",
 			"cacheVariables": {
 				"CMAKE_TOOLCHAIN_FILE": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
-				"VCPKG_INSTALLED_DIR": "${sourceDir}/lib"
+				"VCPKG_INSTALLED_DIR": "${sourceDir}/lib",
+				"VCPKG_MANIFEST_MODE": "ON",
+				"VCPKG_MANIFEST_INSTALL": "ON"
 			}
 		}
 	]
