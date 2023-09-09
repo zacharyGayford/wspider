@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 
 #include <curlpp/cURLpp.hpp>
 #include <curlpp/Easy.hpp>
@@ -15,7 +16,9 @@ int main () {
 		curlpp::Easy request;
 
 		request.setOpt<Url> ("http://example.com");
-		request.perform ();
+		std::ostringstream ss;
+		ss << request;
+		std::cout << ss.str ();
 
 	} catch (const curlpp::RuntimeError& e) {
 		std::cerr << e.what () << std::endl;
